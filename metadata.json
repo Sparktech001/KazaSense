@@ -1,0 +1,11 @@
+{
+  "name": "KazaSense Cloud",
+  "description": "Real-Time AI Diagnostics API for detecting diseased crops or poultry, featuring a global outbreak dashboard.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

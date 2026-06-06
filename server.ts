@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import multer from 'multer';
 import path from 'path';
@@ -71,7 +72,6 @@ app.post('/api/analyze', upload.single('image'), async (req, res) => {
     if (!process.env.GEMINI_API_KEY) {
       return res.status(500).json({ error: 'Gemini API Key is missing. Configure it in settings.' });
     }
-
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     
     const prompt = "You are an expert agricultural and veterinary pathologist. Analyze this image of a " + (type || "crop or poultry") + ". Identify any visible disease, its severity, and provide a short recommendation. Return ONLY valid JSON with no markdown formatting in this exact format: {\"disease\": \"Name of Disease or Healthy\", \"severity\": \"Low|Medium|High|Critical|None\", \"recommendation\": \"Brief recommendation\"}";

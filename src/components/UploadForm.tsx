@@ -76,7 +76,6 @@ export default function UploadForm({ onAnalysisComplete }: UploadFormProps) {
     };
 
     return (
-        <>
         <div className="glass rounded-xl p-6 flex flex-col h-full border-none relative overflow-hidden">
             {isAnalyzing && <div className="scanline"></div>}
             
@@ -213,6 +212,5 @@ export default function UploadForm({ onAnalysisComplete }: UploadFormProps) {
                 )}
             </button>
         </div>
-        </>
     );
 }
